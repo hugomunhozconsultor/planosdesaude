@@ -1,6 +1,6 @@
 <template>
   <div class="root d-flex align-center justify-center pa-5">
-    <div class="d-flex flex-column align-center">
+    <div class="d-flex flex-column align-center text-center">
       <n-link to="/giulia" class="link mt-2 d-block">
         ver Giulia
       </n-link>
