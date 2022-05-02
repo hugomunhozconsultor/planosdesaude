@@ -1,11 +1,11 @@
 <template>
   <div class="root d-flex align-center justify-center pa-5">
-    <div>
-      <n-link to="/giulia" class="link mt-2">
+    <div class="d-flex flex-column align-center">
+      <n-link to="/giulia" class="link mt-2 d-block">
         ver Giulia
       </n-link>
-      <br>
-      <n-link to="/hugo" class="link">
+      <img src="apple-touch-icon.png" class="heart my-5">
+      <n-link to="/hugo" class="link d-block">
         ver Hugo
       </n-link>
     </div>
@@ -31,6 +31,11 @@ export default {
   color: #660a57;
   font-size: 2.5rem;
   font-weight: 500;
+}
+
+.heart {
+  height: 8rem;
+  width: 8rem;
 }
 
 </style>
