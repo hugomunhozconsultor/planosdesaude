@@ -9,7 +9,7 @@ export default {
 
   // Makes it work on gh-pages
   router: {
-    base: '/teste/'
+    base: '/planosdesaude/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
