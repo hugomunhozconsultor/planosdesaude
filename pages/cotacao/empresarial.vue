@@ -35,7 +35,7 @@
         color="#024D90"
         class="number-input"
         rounded
-        @keydown="celularError = ''"
+        @keydown="celularError = ''; form.celular = form.celular.replace(' ', '').replace(/\D/g,'')"
         outlined
       />
       <v-text-field
