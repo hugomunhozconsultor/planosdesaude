@@ -146,6 +146,8 @@ export default {
   }),
   methods: {
     async send () {
+      this.form.email = this.form.email.replace(' ', '')
+      this.form.celular = this.form.celular.replace(' ', '').replace(/\D/g,'')
       if (this.form.celular.length < 10) {
         this.celularError = 'Digite um número de celular válido'
       }
@@ -153,8 +155,6 @@ export default {
         this.cepError = 'Digite um CEP válido'
       }
       if (!this.celularError && !this.cepError) {
-        this.form.email = this.form.email.replace(' ', '')
-        this.form.celular = this.form.celular.replace(' ', '').replace(/\D/g,'')
         this.loading = true
         const config = {
           method: 'post',
