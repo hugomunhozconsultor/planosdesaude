@@ -137,6 +137,8 @@ export default {
         this.cepError = 'Digite um CEP válido'
       }
       if (!this.celularError && !this.cepError) {
+        this.form.email = this.form.email.replace(' ', '')
+        this.form.celular = this.form.celular.replace(' ', '').replace(/\D/g,'')
         this.loading = true
         const config = {
           method: 'post',
