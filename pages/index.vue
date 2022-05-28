@@ -14,7 +14,7 @@
           to="/cotacao"
           :block="$vuetify.breakpoint.smAndDown"
           color="#024D90"
-          class="font-weight-bold btn-text mr-sm-6 text-center"
+          class="font-weight-bold btn-text mr-sm-6 text-center white--text"
           height="70"
           width="360"
           rounded
@@ -28,7 +28,7 @@
           href="https://api.whatsapp.com/send?phone=5521966251426"
           target="_blank"
           color="#024D90"
-          class="font-weight-bold btn-text mt-4 mt-md-0 text-center"
+          class="font-weight-bold btn-text mt-4 mt-md-0 text-center white--text"
           height="70"
           width="360"
         >
@@ -43,7 +43,6 @@
 
 <script>
 export default {
-  name: 'Home'
 }
 </script>
 

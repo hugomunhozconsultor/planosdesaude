@@ -13,7 +13,7 @@
         }"
         class="d-flex align-center option flex-column justify-center pa-3 white--text mr-4"
       >
-        <v-icon :size="$vuetify.breakpoint.xsOnly ? '50' : ($vuetify.breakpoint.smOnly ? '100' : '150')">
+        <v-icon :size="$vuetify.breakpoint.xsOnly ? '50' : ($vuetify.breakpoint.smOnly ? '100' : '150')" color="white">
           {{ option.icon }}
         </v-icon>
         <div class="mt-3 font-weight-bold">
@@ -26,7 +26,6 @@
 
 <script>
 export default {
-  name: 'Cotação',
   data: () => ({
     options: [
       {

@@ -18,7 +18,6 @@
 
 <script>
 export default {
-  name: 'Cotação empresarial'
 }
 </script>
 
