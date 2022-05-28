@@ -18,7 +18,7 @@
         color="#024D90"
         rounded
         outlined
-        @keydown="emailError = ''"
+        @keydown="emailError = ''; form.email = form.email.replace(' ', '')"
       />
       <v-text-field
         v-model="form.celular"
