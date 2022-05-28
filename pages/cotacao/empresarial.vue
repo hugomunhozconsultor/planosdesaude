@@ -26,6 +26,7 @@
         rounded
         outlined
         @keydown="emailError = ''; form.email = form.email.replace(' ', '')"
+        @change="emailError = ''; form.email = form.email.replace(' ', '')"
       />
       <v-text-field
         v-model="form.celular"
@@ -36,6 +37,7 @@
         class="number-input"
         rounded
         @keydown="celularError = ''; form.celular = form.celular.replace(' ', '').replace(/\D/g,'')"
+        @change="celularError = ''; form.celular = form.celular.replace(' ', '').replace(/\D/g,'')"
         outlined
       />
       <v-text-field
