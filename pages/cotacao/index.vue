@@ -12,6 +12,10 @@
           fontSize: $vuetify.breakpoint.xsOnly ? '0.9rem' : ($vuetify.breakpoint.smOnly ? '1.2rem' : '1.6rem')
         }"
         class="d-flex align-center option flex-column justify-center pa-3 white--text mr-4"
+        @click.native="$gtm.trackEvent({
+          event: 'choose_type',
+          dtL_tipoDeCotacao: option.title
+        })"
       >
         <v-icon :size="$vuetify.breakpoint.xsOnly ? '50' : ($vuetify.breakpoint.smOnly ? '100' : '150')" color="white">
           {{ option.icon }}
@@ -44,7 +48,13 @@ export default {
         link: '/cotacao/empresarial'
       }
     ]
-  })
+  }),
+  mounted() {
+    this.$gtm.trackView('Cotação', '/cotacao')
+  },
+  head: {
+    title: 'Cotação'
+  }
 }
 </script>
 

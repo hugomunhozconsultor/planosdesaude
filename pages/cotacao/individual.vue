@@ -149,11 +149,15 @@ export default {
             'cache-control': 'no-cache'
           },
           data: JSON.stringify(this.form)
-        };
+        }
   
         this.$axios(config).then((response) => {
           this.$router.push('/obrigado')
           this.loading = false
+          this.$gtm.trackEvent({
+            event: 'send_form',
+            dtL_tipoDeCotacao: 'INDIVIDUAL'
+          })
         }).catch((e) => {
           this.emailError = 'Digite um email válido'
           this.loading = false
@@ -166,6 +170,12 @@ export default {
       const [year, month, day] = date.split('-')
       return `${month}/${day}/${year}`
     }
+  },
+  mounted() {
+    this.$gtm.trackView('Cotação Individual', '/cotacao/individual')
+  },
+  head: {
+    title: 'Cotação Individual'
   }
 }
 </script>

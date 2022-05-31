@@ -18,6 +18,12 @@
 
 <script>
 export default {
+  mounted() {
+    this.$gtm.trackView('Obrigado', '/obrigado')
+  },
+  head: {
+    title: 'Obrigado'
+  }
 }
 </script>
 

@@ -165,17 +165,27 @@ export default {
             'cache-control': 'no-cache'
           },
           data: JSON.stringify(this.form)
-        };
+        }
   
         this.$axios(config).then((response) => {
           this.$router.push('/obrigado')
           this.loading = false
+          this.$gtm.trackEvent({
+            event: 'send_form',
+            dtL_tipoDeCotacao: 'EMPRESARIAL'
+          })
         }).catch((e) => {
           this.emailError = 'Digite um email válido'
           this.loading = false
         })
       }
     } 
+  },
+  mounted() {
+    this.$gtm.trackView('Cotação Empresarial', '/cotacao/empresarial')
+  },
+  head: {
+    title: 'Cotação Empresarial'
   }
 }
 </script>

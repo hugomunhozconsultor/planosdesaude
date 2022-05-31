@@ -18,6 +18,10 @@
           height="70"
           width="360"
           rounded
+          @click.native="$gtm.trackEvent({
+            event: 'button_click',
+            dtL_button: 'cotação'
+          })"
         >
           Gostaria de solicitar
           <br>
@@ -31,6 +35,10 @@
           class="font-weight-bold btn-text mt-4 mt-md-0 text-center white--text"
           height="70"
           width="360"
+          @click.native="$gtm.trackEvent({
+            event: 'button_click',
+            dtL_button: 'direto'
+          })"
         >
           Quero falar diretamente
           <br>
@@ -43,6 +51,12 @@
 
 <script>
 export default {
+  mounted() {
+    this.$gtm.trackView('Home', '/')
+  },
+  head: {
+    title: 'Home'
+  }
 }
 </script>
 
